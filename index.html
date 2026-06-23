@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إدريس للتجهيزات المائية | Edrees Water Treatment</title>
-    <!-- خط Cairo الفخم والمناسب للمواقع الحديثة -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <!-- مكتبة الأيقونات الفاخرة FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         :root {
             --primary: #0081fd;
-            --primary-glow: rgba(0, 129, 253, 0.15);
-            --dark-bg: #060913;
-            --card-dark: #0f1626;
+            --primary-glow: rgba(0, 129, 253, 0.12);
+            --bg-dark: #070b19;
+            --card-bg: rgba(15, 23, 42, 0.4);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --border: rgba(255, 255, 255, 0.08);
+            --border: rgba(255, 255, 255, 0.06);
         }
 
         * {
@@ -30,32 +28,35 @@
         }
 
         body {
-            background-color: var(--dark-bg);
+            background-color: var(--bg-dark);
             color: var(--text-main);
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            position: relative;
         }
 
-        /* تأثير الخلفية المضيئة المتحركة (نفس التصميمات العالمية) */
+        /* تأثير قطرات الضوء والمياه الخلفية التفاعلية */
         body::before {
             content: '';
             position: absolute;
-            top: -10%;
+            top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0, 129, 253, 0.2) 0%, transparent 70%);
+            width: 100%;
+            max-width: 600px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(0, 129, 253, 0.15) 0%, transparent 70%);
             z-index: -1;
             pointer-events: none;
+            filter: blur(40px);
         }
 
-        /* هيدر زجاجي شفاف فاخر */
+        /* هيدر مرن متجاوب بالكامل */
         header {
-            background-color: rgba(6, 9, 19, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 20px 8%;
+            background-color: rgba(10, 16, 36, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -66,10 +67,9 @@
         }
 
         .logo-container img {
-            max-height: 55px;
+            max-height: 50px;
             width: auto;
             display: block;
-            filter: drop-shadow(0 2px 8px rgba(0,129,253,0.3));
         }
 
         .header-tag {
@@ -77,65 +77,73 @@
             font-size: 0.8rem;
             font-weight: 700;
             border: 1px solid rgba(0, 129, 253, 0.3);
-            padding: 6px 16px;
+            padding: 6px 14px;
             border-radius: 100px;
-            background: rgba(0, 129, 253, 0.1);
-            box-shadow: 0 0 15px var(--primary-glow);
+            background: rgba(0, 129, 253, 0.08);
+            white-space: nowrap;
         }
 
-        /* قسم الـ Hero بتصميم فخم ودقيق للعين */
+        /* قسم الـ Hero متجاوب */
         .hero {
-            padding: 120px 8% 80px;
+            padding: 80px 5% 50px;
             text-align: center;
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
+            position: relative;
+        }
+
+        .water-drop-bg {
+            font-size: 4rem;
+            color: rgba(0, 129, 253, 0.04);
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            animation: float 4s ease-in-out infinite;
         }
 
         .hero p.subtitle {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--primary);
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            display: inline-block;
+            letter-spacing: 1px;
             background: rgba(0, 129, 253, 0.08);
-            padding: 4px 16px;
-            border-radius: 8px;
+            padding: 4px 14px;
+            border-radius: 50px;
+            display: inline-block;
         }
 
         .hero h1 {
-            font-size: 3.8rem;
+            font-size: 2.8rem; /* تصغير الحجم الافتراضي ليكون متناسقاً */
             font-weight: 800;
             color: #ffffff;
-            margin-bottom: 25px;
-            line-height: 1.3;
-            background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            line-height: 1.4;
         }
 
         .hero p.description {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--text-muted);
-            line-height: 1.9;
-            font-weight: 400;
+            line-height: 1.8;
         }
 
-        /* كروت المنتجات والشبكة الهندسية */
+        /* حاوية الكروت والشبكة الهندسية المتجاوبة */
         .section-container {
-            padding: 80px 8%;
+            padding: 40px 5% 60px;
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 45px;
         }
 
         .section-title h2 {
-            font-size: 2.3rem;
+            font-size: 2rem;
             font-weight: 800;
             color: #ffffff;
             position: relative;
@@ -145,178 +153,170 @@
         .section-title h2::after {
             content: '';
             position: absolute;
-            bottom: -12px;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
+            width: 50px;
+            height: 3px;
             background: var(--primary);
             border-radius: 10px;
-            box-shadow: 0 0 10px var(--primary);
+            box-shadow: 0 0 12px var(--primary);
         }
 
+        /* استخدام الـ Grid المتجاوب بذكاء التغيير التلقائي للأعمدة */
         .grid-products {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
-        /* كروت بتأثير زجاجي مظلم ناعم وحواف دقيقة */
         .product-card {
-            background: var(--card-dark);
-            border-radius: 24px;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
             overflow: hidden;
             border: 1px solid var(--border);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.3s ease;
         }
 
         .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0,129,253,0.1);
-            border-color: rgba(0, 129, 253, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0,129,253,0.15);
+            border-color: rgba(0, 129, 253, 0.4);
         }
 
         .image-wrapper {
             position: relative;
             width: 100%;
-            height: 260px;
+            height: 220px;
             overflow: hidden;
-            background: #0b0f19;
+            background: #090f1e;
         }
 
         .product-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.85;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
+            opacity: 0.8;
+            transition: transform 0.5s ease;
         }
 
         .product-card:hover img {
-            transform: scale(1.05);
+            transform: scale(1.03);
             opacity: 1;
         }
 
         .card-icon-badge {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(15, 22, 38, 0.8);
-            backdrop-filter: blur(10px);
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
+            top: 15px;
+            right: 15px;
+            background: rgba(7, 11, 25, 0.85);
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--primary);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             border: 1px solid var(--border);
             z-index: 10;
         }
 
         .card-body {
-            padding: 30px;
+            padding: 25px;
         }
 
         .card-body h3 {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .card-body p {
             color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.7;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        /* قسم المميزات */
+        /* قسم المميزات المتجاوب */
         .features-section {
-            background-color: #0b0f19;
-            padding: 90px 8%;
+            background-color: #050812;
+            padding: 60px 5%;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .feature-box {
-            background: var(--card-dark);
-            padding: 40px 30px;
-            border-radius: 24px;
+            background: var(--card-bg);
+            padding: 35px 25px;
+            border-radius: 20px;
             border: 1px solid var(--border);
             text-align: center;
             transition: all 0.3s ease;
         }
 
-        .feature-box:hover {
-            border-color: var(--primary);
-            background: #111a2e;
-        }
-
         .feature-icon {
-            width: 54px;
-            height: 54px;
+            width: 48px;
+            height: 48px;
             background: rgba(0, 129, 253, 0.1);
             color: var(--primary);
-            border-radius: 16px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
-            margin: 0 auto 25px;
-            border: 1px solid rgba(0, 129, 253, 0.2);
+            font-size: 1.2rem;
+            margin: 0 auto 20px;
+            border: 1px solid rgba(0, 129, 253, 0.15);
         }
 
         .feature-box h4 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .feature-box p {
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             color: var(--text-muted);
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
-        /* قسم أزرار التواصل البريميوم العريضة */
+        /* قسم أزرار التواصل المتجاوبة */
         .cta-premium {
-            background: linear-gradient(180deg, var(--dark-bg) 0%, #03050a 100%);
+            background: linear-gradient(180deg, var(--bg-dark) 0%, #03050a 100%);
             color: white;
             text-align: center;
-            padding: 100px 8%;
-            position: relative;
+            padding: 70px 5%;
         }
 
         .cta-premium h2 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 800;
             margin-bottom: 15px;
-            background: linear-gradient(180deg, #ffffff 0%, #94a3b8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .cta-premium p {
             color: var(--text-muted);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             max-width: 650px;
-            margin: 0 auto 45px;
+            margin: 0 auto 35px;
         }
 
         .contact-buttons-container {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -324,52 +324,55 @@
         .action-btn {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             background: var(--primary);
             color: white;
-            padding: 16px 38px;
+            padding: 14px 32px;
             text-decoration: none;
-            border-radius: 14px;
+            border-radius: 12px;
             font-weight: 700;
-            font-size: 1.05rem;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            border: 1px solid transparent;
-            box-shadow: 0 10px 25px rgba(0, 129, 253, 0.3);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 129, 253, 0.3);
         }
 
         .action-btn.secondary-btn {
             background: #25d366;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.2);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2);
         }
 
         .action-btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 30px rgba(0, 129, 253, 0.4);
-        }
-
-        .action-btn.secondary-btn:hover {
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 129, 253, 0.4);
         }
 
         footer {
             background: #03050a;
             color: #475569;
             text-align: center;
-            padding: 35px;
+            padding: 30px;
             border-top: 1px solid var(--border);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
-        /* تجاوب ذكي وسلس للغاية مع الهواتف الذكية */
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, 0px); }
+            50% { transform: translate(-50%, -10px); }
+        }
+
+        /* تعديلات الموبايل الدقيقة جداً لشاشات الهواتف */
         @media (max-width: 768px) {
-            header { padding: 15px 5%; }
-            .hero { padding: 80px 5% 60px; }
-            .hero h1 { font-size: 2.3rem; }
-            .section-container { padding: 50px 5%; }
-            .section-title h2 { font-size: 1.8rem; }
-            .grid-products { grid-template-columns: 1fr; gap: 25px; }
-            .contact-buttons-container { flex-direction: column; align-items: center; }
-            .action-btn { width: 100%; max-width: 340px; justify-content: center; border-radius: 12px; }
+            header { padding: 12px 4%; }
+            .logo-container img { max-height: 42px; }
+            .hero { padding: 50px 4% 35px; }
+            .hero h1 { font-size: 1.9rem; line-height: 1.4; }
+            .hero p.description { font-size: 1.05rem; }
+            .section-container { padding: 30px 4%; }
+            .section-title { margin-bottom: 30px; }
+            .section-title h2 { font-size: 1.6rem; }
+            .grid-products { grid-template-columns: 1fr; gap: 20px; }
+            .contact-buttons-container { flex-direction: column; align-items: center; width: 100%; }
+            .action-btn { width: 100%; max-width: 100%; justify-content: center; padding: 14px 20px; }
         }
     </style>
 </head>
@@ -383,6 +386,7 @@
     </header>
 
     <section class="hero">
+        <div class="water-drop-bg"><i class="fa-solid fa-droplet"></i></div>
         <p class="subtitle">Edrees for water treatment Technologies</p>
         <h1>شركة إدريس للتجهيزات المائية</h1>
         <p class="description">
@@ -396,7 +400,6 @@
         </div>
         
         <div class="grid-products">
-            <!-- الكارت الأول -->
             <div class="product-card">
                 <div class="image-wrapper">
                     <div class="card-icon-badge"><i class="fa-solid fa-filter"></i></div>
@@ -408,7 +411,6 @@
                 </div>
             </div>
 
-            <!-- الكارت الثاني -->
             <div class="product-card">
                 <div class="image-wrapper">
                     <div class="card-icon-badge"><i class="fa-solid fa-industry"></i></div>
@@ -420,7 +422,6 @@
                 </div>
             </div>
 
-            <!-- الكارت الثالث -->
             <div class="product-card">
                 <div class="image-wrapper">
                     <div class="card-icon-badge"><i class="fa-solid fa-gears"></i></div>
