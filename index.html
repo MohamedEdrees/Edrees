@@ -6,7 +6,7 @@
     <title>إدريس للتجهيزات المائية | Edrees Water Treatment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2 family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
@@ -97,13 +97,47 @@
             white-space: nowrap;
         }
 
-        /* قسم الـ Hero */
+        /* قسم الـ Hero المطور */
         .hero {
-            padding: 80px 5% 50px;
+            padding: 50px 5% 50px;
             text-align: center;
             max-width: 900px;
             margin: 0 auto;
             position: relative;
+        }
+
+        /* حاوية بيضاء مذهلة على شكل قطرة مياه انسيابية مسحوبة لأعلى لإبراز اللوجو الشفاف */
+        .hero-water-drop-container {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.95);
+            /* هندسة شكل قطرة المياه: زوايا دائرية من الأسفل ومسحوبة من الأعلى */
+            border-radius: 0% 100% 100% 100% / 0% 100% 100% 100%;
+            /* تدوير القطرة بمقدار 45 درجة لتصبح رأسها متجهة لأعلى تماماً */
+            transform: rotate(45deg);
+            padding: 35px;
+            margin-bottom: 35px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 129, 253, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        /* إعادة تدوير صورة اللوجو عكس اتجاه القطرة ليظل معتدلاً وصحيحاً وبحجم مثالي */
+        .hero-water-drop-container img {
+            max-height: 95px;
+            width: auto;
+            display: block;
+            transform: rotate(-45deg); 
+            transition: all 0.4s ease;
+        }
+
+        .hero-water-drop-container:hover {
+            transform: rotate(45deg) scale(1.05);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 129, 253, 0.5);
+            background: #ffffff;
+        }
+
+        .hero-water-drop-container:hover img {
+            transform: rotate(-45deg) scale(1.02);
         }
 
         .water-drop-bg {
@@ -118,14 +152,14 @@
         }
 
         .hero p.subtitle {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: var(--primary);
             font-weight: 700;
             margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 1px;
             background: rgba(0, 129, 253, 0.08);
-            padding: 4px 14px;
+            padding: 6px 18px;
             border-radius: 50px;
             display: inline-block;
         }
@@ -254,7 +288,7 @@
             line-height: 1.6;
         }
 
-        /* قسم المميزات الهندسية */
+        /* قسم المميزات */
         .features-section {
             background-color: #050812;
             padding: 60px 5%;
@@ -306,7 +340,7 @@
             line-height: 1.6;
         }
 
-        /* تنسيق قسم الاتصال المطور والفاخر جداً */
+        /* قسم الاتصال */
         .cta-premium {
             background: linear-gradient(180deg, var(--bg-dark) 0%, #03050a 100%);
             color: white;
@@ -415,7 +449,7 @@
             50% { transform: translate(-50%, -10px); }
         }
 
-        /* تعديلات التجاوب مع الجوال والتابلت */
+        /* تعديلات التجاوب */
         @media (max-width: 991px) {
             .action-btn { width: 100%; }
         }
@@ -425,8 +459,10 @@
             .brand-wrapper { gap: 10px; }
             .logo-container img { max-height: 40px; }
             .logo-text-side { font-size: 0.72rem; padding-right: 10px; line-height: 1.3; }
-            .header-tag { display: none; } /* إخفاء التاج في الشاشات الصغيرة للمحافظة على المساحة */
-            .hero { padding: 50px 4% 35px; }
+            .header-tag { display: none; }
+            .hero { padding: 35px 4% 35px; }
+            .hero-water-drop-container { padding: 25px; margin-bottom: 25px; }
+            .hero-water-drop-container img { max-height: 70px; } /* حجم متناسب لقطرة المياه واللوجو على الموبايل */
             .hero h1 { font-size: 1.9rem; line-height: 1.4; }
             .hero p.description { font-size: 1.05rem; }
             .section-container { padding: 30px 4%; }
@@ -443,7 +479,8 @@
                 <img src="Logo.png" alt="شعار شركة إدريس للتجهيزات المائية">
             </div>
             <div class="logo-text-side">
-                Edrees for water treatment<br>Technologies
+                شركة إدريس للتجهيزات المائية
+
             </div>
         </div>
         <div class="header-tag">الموقع الرسمي قريباً</div>
@@ -451,10 +488,16 @@
 
     <section class="hero">
         <div class="water-drop-bg"><i class="fa-solid fa-droplet"></i></div>
+        
+        <div class="hero-water-drop-container">
+            <img src="Logo.png" alt="شركة إدريس للتجهيزات المائية">
+        </div>
+        <br>
+        
         <p class="subtitle">Edrees for water treatment Technologies</p>
         <h1>شركة إدريس للتجهيزات المائية</h1>
         <p class="description">
-            نحن رواد تقديم وتطوير أحدث حلول تكنولوجيا معالجة وتصفية وتطهير المياه في السوق المصري. نلتزم بأعلى معايير الهندسة والجودة لتقديم مياه نقية وآمنة تماماً للمنشآت الصناعية والتجارية والسكنية.
+            نحن رواد تقديم وتطوير أحدث حلول تكنولوجيا معالجة وتصفية المياه في السوق المصري. نلتزم بأعلى معايير الهندسة والجودة لتقديم مياه نقية وآمنة تماماً للمنشآت الصناعية والتجارية والسكنية.
         </p>
     </section>
 
@@ -471,7 +514,7 @@
                 </div>
                 <div class="card-body">
                     <h3>أنظمة الفلاتر والتنقية</h3>
-                    <p>حلول تنقية ذكية متعددة المراحل للتخلص التام من الشوائب والكلور والأملاح الزائدة، مصممة لتلبية متطلبات المنازل والمنشآت التجارية بنقاء مطلق.</p>
+                    <p>حلول تنقية ذكية متعددة المراحل للتخلص التام من الشوائب والكلور والأملاح والمعادن الزائدة، مصممة لتلبية متطلبات المنازل والمنشآت التجارية بنقاء مطلق.</p>
                 </div>
             </div>
 
@@ -482,7 +525,7 @@
                 </div>
                 <div class="card-body">
                     <h3>محطات المعالجة والتحلية</h3>
-                    <p>هندسة وتشييد محطات تحلية مياه الآبار والمياه الجوفية والمركزية للمصانع والمزارع والمشاريع الكبرى داخل جمهورية مصر العربية بكفاءة تشغيلية مستدامة.</p>
+                    <p>تصميم وتوريد وتركيب محطات تحلية مياه الآبار والمياه الجوفية والمركزية للمصانع والمزارع والمشاريع الكبرى داخل جمهورية مصر العربية بكفاءة تشغيلية مستدامة.</p>
                 </div>
             </div>
 
@@ -493,7 +536,7 @@
                 </div>
                 <div class="card-body">
                     <h3>التجهيزات والمستلزمات المائية</h3>
-                    <p>مجموعة واسعة من التجهيزات والمكونات الميكانيكية والذكية تشمل المضخات، العدادات الرقمية، وقطع الغيار المعتمدة لخطوط وشبكات المياه.</p>
+                    <p>مجموعة واسعة من التجهيزات والمكونات الميكانيكية والذكية تشمل المضخات، العدادات ، وقطع الغيار المعتمدة لمحطات وفلاتر المياه.</p>
                 </div>
             </div>
         </div>
@@ -509,7 +552,7 @@
             <div class="feature-box">
                 <div class="feature-icon"><i class="fa-solid fa-droplet"></i></div>
                 <h4>حلول مخصصة لمصر</h4>
-                <p>ندرس طبيعة المياه ونقدم أنظمة معالجة مصممة خصيصاً لتناسب الاحتياجات التشغيلية داخل مصر.</p>
+                <p>ندرس طبيعة المياه ونقدم أنظمة معالجة مصممة خصيصاً لتناسب الاحتياجات التشغيلية.</p>
             </div>
             <div class="feature-box">
                 <div class="feature-icon"><i class="fa-solid fa-user-gear"></i></div>
@@ -529,7 +572,7 @@
                     <i class="fa-brands fa-whatsapp main-icon"></i>
                     <div>
                         <span class="btn-label">الخط الساخن والدعم</span>
-                        <span class="phone-num">01000434674</span>
+                        <span class="phone-num">م/محمــد    01000434674</span>
                     </div>
                 </div>
                 <i class="fa-solid fa-chevron-left arrow-icon"></i>
@@ -540,7 +583,7 @@
                     <i class="fa-brands fa-whatsapp main-icon"></i>
                     <div>
                         <span class="btn-label">المبيعات والاستشارات</span>
-                        <span class="phone-num">01009656747</span>
+                        <span class="phone-num"> م/اسمــاعيل    01009656747</span>
                     </div>
                 </div>
                 <i class="fa-solid fa-chevron-left arrow-icon"></i>
