@@ -6,7 +6,7 @@
     <title>إدريس للتجهيزات المائية | Edrees Water Treatment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2 family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
@@ -35,7 +35,7 @@
             position: relative;
         }
 
-        /* تأثير قطرات الضوء والمياه الخلفية التفاعلية */
+        /* تأثير قطرات الضوء المائية الخلفية التفاعلية */
         body::before {
             content: '';
             position: absolute;
@@ -51,39 +51,53 @@
             filter: blur(40px);
         }
 
-        /* هيدر مرن متجاوب بالكامل */
+        /* هيدر ناصع البياض يظهر اللوجو الكحلي بوضوح تام وثبات هندسي */
         header {
-            background-color: rgba(10, 16, 36, 0.7);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            padding: 15px 5%;
+            background-color: #ffffff;
+            padding: 12px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 3px solid var(--primary);
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .brand-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
         .logo-container img {
-            max-height: 50px;
+            max-height: 52px;
             width: auto;
             display: block;
         }
 
-        .header-tag {
-            color: var(--primary);
-            font-size: 0.8rem;
+        .logo-text-side {
+            color: #0b3c66;
+            font-size: 0.95rem;
             font-weight: 700;
-            border: 1px solid rgba(0, 129, 253, 0.3);
+            letter-spacing: 0.5px;
+            border-right: 2px solid #e2e8f0;
+            padding-right: 15px;
+        }
+
+        .header-tag {
+            color: #0b3c66;
+            font-size: 0.8rem;
+            font-weight: 800;
+            border: 1px solid rgba(11, 60, 102, 0.2);
             padding: 6px 14px;
             border-radius: 100px;
-            background: rgba(0, 129, 253, 0.08);
+            background: #f0f7ff;
             white-space: nowrap;
         }
 
-        /* قسم الـ Hero متجاوب */
+        /* قسم الـ Hero */
         .hero {
             padding: 80px 5% 50px;
             text-align: center;
@@ -117,7 +131,7 @@
         }
 
         .hero h1 {
-            font-size: 2.8rem; /* تصغير الحجم الافتراضي ليكون متناسقاً */
+            font-size: 2.8rem;
             font-weight: 800;
             color: #ffffff;
             margin-bottom: 20px;
@@ -130,7 +144,7 @@
             line-height: 1.8;
         }
 
-        /* حاوية الكروت والشبكة الهندسية المتجاوبة */
+        /* المنتجات والحلول */
         .section-container {
             padding: 40px 5% 60px;
             max-width: 1400px;
@@ -163,7 +177,6 @@
             box-shadow: 0 0 12px var(--primary);
         }
 
-        /* استخدام الـ Grid المتجاوب بذكاء التغيير التلقائي للأعمدة */
         .grid-products {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -241,7 +254,7 @@
             line-height: 1.6;
         }
 
-        /* قسم المميزات المتجاوب */
+        /* قسم المميزات الهندسية */
         .features-section {
             background-color: #050812;
             padding: 60px 5%;
@@ -293,12 +306,12 @@
             line-height: 1.6;
         }
 
-        /* قسم أزرار التواصل المتجاوبة */
+        /* تنسيق قسم الاتصال المطور والفاخر جداً */
         .cta-premium {
             background: linear-gradient(180deg, var(--bg-dark) 0%, #03050a 100%);
             color: white;
             text-align: center;
-            padding: 70px 5%;
+            padding: 80px 5%;
         }
 
         .cta-premium h2 {
@@ -311,39 +324,81 @@
             color: var(--text-muted);
             font-size: 1.1rem;
             max-width: 650px;
-            margin: 0 auto 35px;
+            margin: 0 auto 40px;
         }
 
         .contact-buttons-container {
             display: flex;
-            gap: 15px;
+            gap: 25px;
             justify-content: center;
             flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .action-btn {
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            gap: 10px;
-            background: var(--primary);
-            color: white;
-            padding: 14px 32px;
+            justify-content: space-between;
+            background: rgba(37, 211, 102, 0.1);
+            border: 1px solid rgba(37, 211, 102, 0.4);
+            color: #ffffff;
+            padding: 16px 28px;
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 16px;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(0, 129, 253, 0.3);
+            width: calc(50% - 13px);
+            min-width: 300px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .action-btn.secondary-btn {
-            background: #25d366;
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2);
+        .action-btn .btn-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-align: right;
+        }
+
+        .action-btn i.main-icon {
+            font-size: 2rem;
+            color: #25d366;
+        }
+
+        .action-btn .btn-label {
+            font-size: 0.8rem;
+            color: #25d366;
+            display: block;
+            font-weight: 600;
+        }
+
+        .action-btn .phone-num {
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+        }
+
+        .action-btn i.arrow-icon {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s;
         }
 
         .action-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(0, 129, 253, 0.4);
+            transform: translateY(-4px);
+            background: #25d366;
+            border-color: #25d366;
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .action-btn:hover i.main-icon,
+        .action-btn:hover .btn-label,
+        .action-btn:hover i.arrow-icon {
+            color: #ffffff;
+        }
+
+        .action-btn:hover i.arrow-icon {
+            transform: translateX(-5px);
         }
 
         footer {
@@ -360,27 +415,36 @@
             50% { transform: translate(-50%, -10px); }
         }
 
-        /* تعديلات الموبايل الدقيقة جداً لشاشات الهواتف */
+        /* تعديلات التجاوب مع الجوال والتابلت */
+        @media (max-width: 991px) {
+            .action-btn { width: 100%; }
+        }
+
         @media (max-width: 768px) {
             header { padding: 12px 4%; }
-            .logo-container img { max-height: 42px; }
+            .brand-wrapper { gap: 10px; }
+            .logo-container img { max-height: 40px; }
+            .logo-text-side { font-size: 0.72rem; padding-right: 10px; line-height: 1.3; }
+            .header-tag { display: none; } /* إخفاء التاج في الشاشات الصغيرة للمحافظة على المساحة */
             .hero { padding: 50px 4% 35px; }
             .hero h1 { font-size: 1.9rem; line-height: 1.4; }
             .hero p.description { font-size: 1.05rem; }
             .section-container { padding: 30px 4%; }
-            .section-title { margin-bottom: 30px; }
             .section-title h2 { font-size: 1.6rem; }
             .grid-products { grid-template-columns: 1fr; gap: 20px; }
-            .contact-buttons-container { flex-direction: column; align-items: center; width: 100%; }
-            .action-btn { width: 100%; max-width: 100%; justify-content: center; padding: 14px 20px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <img src="Logo.png" alt="شعار شركة إدريس للتجهيزات المائية">
+        <div class="brand-wrapper">
+            <div class="logo-container">
+                <img src="Logo.png" alt="شعار شركة إدريس للتجهيزات المائية">
+            </div>
+            <div class="logo-text-side">
+                Edrees for water treatment<br>Technologies
+            </div>
         </div>
         <div class="header-tag">الموقع الرسمي قريباً</div>
     </header>
@@ -460,11 +524,26 @@
         <p>فريق خبراء شركة إدريس جاهز للرد الفوري على استفساراتكم لتحديد النظام المائي الأمثل لمنشأتك.</p>
         
         <div class="contact-buttons-container">
-            <a href="https://wa.me/201000434674" class="action-btn" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> تواصل عبر: 01000434674
+            <a href="https://wa.me/2010000434674" class="action-btn" target="_blank">
+                <div class="btn-info">
+                    <i class="fa-brands fa-whatsapp main-icon"></i>
+                    <div>
+                        <span class="btn-label">الخط الساخن والدعم</span>
+                        <span class="phone-num">01000434674</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-left arrow-icon"></i>
             </a>
-            <a href="https://wa.me/201009656747" class="action-btn secondary-btn" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> تواصل عبر: 01009656747
+
+            <a href="https://wa.me/201009656747" class="action-btn" target="_blank">
+                <div class="btn-info">
+                    <i class="fa-brands fa-whatsapp main-icon"></i>
+                    <div>
+                        <span class="btn-label">المبيعات والاستشارات</span>
+                        <span class="phone-num">01009656747</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-left arrow-icon"></i>
             </a>
         </div>
     </section>
